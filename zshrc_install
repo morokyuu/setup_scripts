@@ -68,5 +68,8 @@ alias gcm='git commit -m'
 alias gcl='git config --list'
 alias gd='git diff'
 
+alias vimrc='vi ~/.vimrc'
+alias zshrc='vi ~/.zshrc'
+alias bashrc='vi ~/.bashrc'
 
 EOF
