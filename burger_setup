@@ -1,0 +1,36 @@
+#!/bin/bash
+
+cd ~/catkin_ws/src
+git clone https://github.com/p-robotics-hub/burger_war_kit
+git clone https://github.com/nexusrobot/burger_war_dev.git
+
+echo "export TURTLEBOT3_MODEL=burger" >> ~/.bashrc
+source ~/.bashrc
+
+
+# pip のインストール
+sudo apt install -y python-pip
+#　requests flask のインストール
+sudo pip install -y requests flask
+# turtlebot3 関係パッケージのインストール
+sudo apt install -y \
+ ros-melodic-turtlebot3 ros-melodic-turtlebot3-msgs  ros-melodic-turtlebot3-simulations \
+ ros-melodic-teleop-twist-keyboard ros-melodic-amcl ros-melodic-map-server \
+ ros-melodic-move-base ros-melodic-urdf ros-melodic-xacro \
+ ros-melodic-compressed-image-transport ros-melodic-rqt-image-view \
+ ros-melodic-gmapping ros-melodic-navigation ros-melodic-interactive-markers \
+ ros-melodic-hector-gazebo-plugins
+# aruco (ARマーカー読み取りライブラリ）
+sudo apt install -y ros-melodic-aruco-ros
+# PIL
+sudo apt install -y python-pil python-pil.imagetk
+
+cd ~/catkin_ws
+catkin build
+source ~/.bashrc
+
+
+
+
+
+

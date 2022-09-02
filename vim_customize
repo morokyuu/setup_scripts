@@ -1,0 +1,51 @@
+#!/bin/bash
+
+MYVIMRC='~/.vimrc'
+echo "$MYVIMRC"
+
+if [ ! -d ~/.vim/autoload ]
+then
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+fi
+
+
+
+cat << EOF > $MYVIMRC
+
+" タブの画面上での幅
+set tabstop=4
+" タブをスペースに展開 (expandtab:展開する)
+set expandtab
+" 自動的にインデントする (noautoindent:インデントしない)
+set autoindent
+" バックスペースでインデントや改行を削除できるようにする
+set backspace=indent,eol,start
+" 検索時にファイルの最後まで行ったら最初に戻る (nowrapscan:戻らない)
+set wrapscan
+" 括弧入力時に対応する括弧を表示 (noshowmatch:表示しない)
+set showmatch
+" コマンドライン補完するときに強化されたものを使う(参照 :help wildmenu)
+set wildmenu
+" テキスト挿入中の自動折り返しを日本語に対応させる
+set formatoptions+=mM
+
+
+
+set number
+
+set guifont=Cica\ 12
+
+call plug#begin()
+Plug 'https://github.com/w0ng/vim-hybrid.git'
+Plug 'https://github.com/preservim/nerdtree.git'
+Plug 'https://github.com/vim-airline/vim-airline.git'
+call plug#end()
+
+" hint, :NERDTree for open file-tree.
+
+set background=dark
+colorscheme hybrid
+EOF
+
