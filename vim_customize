@@ -35,8 +35,16 @@ set formatoptions+=mM
 
 set number
 
+### font setup
+TEMPDIR="./cica_font"
+wget https://github.com/miiton/Cica/releases/download/v5.0.3/Cica_v5.0.3.zip
+mkdir $TEMPDIR 
+unzip Cica_v5.0.3.zip -d $TEMPDIR
+mkdir ~/.fonts
+cp $TEMPDIR/Cica* ~/.fonts
 set guifont=Cica\ 12
 
+### vim-plug
 call plug#begin()
 Plug 'https://github.com/w0ng/vim-hybrid.git'
 Plug 'https://github.com/preservim/nerdtree.git'
@@ -45,6 +53,7 @@ call plug#end()
 
 " hint, :NERDTree for open file-tree.
 
+### color scheme
 set background=dark
 colorscheme hybrid
 EOF
