@@ -67,6 +67,8 @@ alias ga='git add'
 alias gcm='git commit -m'
 alias gcl='git config --list'
 alias gd='git diff'
+alias gp='git push'
+alias co='git checkout'
 
 alias vimrc='vi ~/.vimrc'
 alias zshrc='vi ~/.zshrc'
