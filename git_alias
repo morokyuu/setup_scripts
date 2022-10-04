@@ -1,0 +1,11 @@
+
+git config --global alias.graph "log --graph --date-order --all --pretty=format:'%h %Cred%d %Cgreen%ad %Cblue%cn %Creset%s' --date=short"
+alias gg='git graph'
+
+alias gs='git status'
+alias gl='git log'
+alias ga='git add'
+alias gc='git commit'
+alias gm='git merge'
+alias gd='git diff'
+alias co='git checkout'
