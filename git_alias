@@ -2,6 +2,8 @@
 git config --global alias.graph "log --graph --date-order --all --pretty=format:'%h %Cred%d %Cgreen%ad %Cblue%cn %Creset%s' --date=short"
 alias gg='git graph'
 
+git config credential.helper 'cache --timeout 360000'
+
 alias gs='git status'
 alias gl='git log'
 alias ga='git add'
