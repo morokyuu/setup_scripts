@@ -7,6 +7,8 @@ git config credential.helper 'cache --timeout 360000'
 git config --global user.email "nano@example.com"
 git config --global user.name "nano"
 
+git config --global init.defaultBranch main
+
 alias gs='git status'
 alias gl='git log'
 alias ga='git add'
