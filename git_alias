@@ -4,6 +4,9 @@ alias gg='git graph'
 
 git config credential.helper 'cache --timeout 360000'
 
+git config --global user.email "nano@example.com"
+git config --global user.name "nano"
+
 alias gs='git status'
 alias gl='git log'
 alias ga='git add'
