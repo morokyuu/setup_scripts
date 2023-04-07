@@ -2,3 +2,4 @@
 
 alias di='docker images'
 alias dp='docker ps -a'
+alias dr='docker container run --rm -it'
