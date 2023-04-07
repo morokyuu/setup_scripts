@@ -5,6 +5,9 @@ alias di='docker images'
 alias dp='docker ps -a'
 alias dr='docker container run --rm -it'
 
-## memo: all container remove
+alias dcprune='docker container prune'
+alias diprune='docker image prune'
+
+## memo: all container remove = docker container prune
 ## dp | awk 'NR>1{print $1}' | xargs -n1 docker container rm -f
 
