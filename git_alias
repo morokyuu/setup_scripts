@@ -8,6 +8,7 @@ git config --global user.email "nano@example.com"
 git config --global user.name "nano"
 
 git config --global init.defaultBranch main
+git config --global core.editor vim
 
 alias gs='git status'
 alias gl='git log'
