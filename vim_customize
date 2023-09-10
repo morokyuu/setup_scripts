@@ -14,28 +14,24 @@ fi
 
 cat << EOF > $MYVIMRC
 
-" タブの画面上での幅
+"tab stop
 set tabstop=4
 set shiftwidth=4
-" タブをスペースに展開 (expandtab:展開する)
 set expandtab
-" 自動的にインデントする (noautoindent:インデントしない)
 set autoindent
-" バックスペースでインデントや改行を削除できるようにする
+" backspace indent,eol,start
 set backspace=indent,eol,start
-" 検索時にファイルの最後まで行ったら最初に戻る (nowrapscan:戻らない)
+" scan from start
 set wrapscan
-" 括弧入力時に対応する括弧を表示 (noshowmatch:表示しない)
+" curl match
 set showmatch
-" コマンドライン補完するときに強化されたものを使う(参照 :help wildmenu)
+" command candidate
 set wildmenu
-" テキスト挿入中の自動折り返しを日本語に対応させる
+" wrap for kana-word
 set formatoptions+=mM
-
+" swapfile
 set noswapfile
-
-
-
+" line number
 set number
 
 ### font setup
