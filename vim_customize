@@ -16,6 +16,7 @@ cat << EOF > $MYVIMRC
 
 " タブの画面上での幅
 set tabstop=4
+set shiftwidth=4
 " タブをスペースに展開 (expandtab:展開する)
 set expandtab
 " 自動的にインデントする (noautoindent:インデントしない)
